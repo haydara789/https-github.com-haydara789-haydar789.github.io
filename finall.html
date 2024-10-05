@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Optional: set a font family */
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.section {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 20px;
+    position: relative;
+    background-color: aquamarine;
+}
+
+/* Section title styles */
+.title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f1c40f; /* Unique color for section title */
+    padding: 5px;
+    border: 1px solid black;
+}
+
+/* Desktop View (992px and above) */
+@media (min-width: 992px) {
+    .section {
+        width: 32%; /* Each section takes up one-third of the container */
+        float: left; /* Allow sections to float next to each other */
+    }
+}
+
+/* Tablet View (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 48%; /* First two sections take half of the row */
+        float: left;
+    }
+    #sushi {
+        width: 100%; /* Third section takes the full width */
+        clear: both; /* Clear float to start a new line */
+    }
+}
+
+/* Mobile View (767px and below) */
+@media (max-width: 767px) {
+    .section {
+        width: 100%; /* Each section takes full width */
+        float: none; /* Remove float */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Responsive Page</h1>
+    </header>
+    <main>
+        <section class="section" id="chicken">
+            <div class="title">Chicken</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+        <section class="section" id="beef">
+            <div class="title">Beef</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+        <section class="section" id="sushi">
+            <div class="title">Sushi</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+    </main>
+</body>
+</html>
